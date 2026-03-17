@@ -1,0 +1,145 @@
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 10px;
+}
+/* Price, Ryan. “Schedule.” IXD Methods, ryanwprice.github.io/ixd-methods/schedule/. Accessed 16 Nov. 2023. */
+
+/*Net Ninja. “Build Layouts with CSS Grid #8 - 12 Column Grid.” Www.youtube.com, 22 June 2022, www.youtube.com/watch?v=-IAypuhKgJs. Accessed 16 Nov. 2023. */
+
+.cell {
+    background-color: rgb(127, 113, 113);
+    height: 100px;
+}
+/*Price, Ryan. “Schedule.” IXD Methods, ryanwprice.github.io/ixd-methods/schedule/. Accessed 16 Nov. 2023.*/
+
+
+body {
+    background-image: url('images/background.png');
+    background-size: cover;
+    background-position: center;
+}
+
+img {
+    padding: 50px; 
+}
+
+.logo {
+    display: block;
+    margin: 50px; /* Center the logo horizontally */
+    grid-column: 4 / span 6; /* Spanning 10 columns starting from the 2nd column */
+    /* Other styles for logo */
+}
+
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 500;
+    grid-column: 2 / span 7; 
+    margin-top: -40px; 
+}
+
+/* “Are There Any Style Options for the HTML5 Date Picker?” Stack Overflow, stackoverflow.com/questions/14946091/are-there-any-style-options-for-the-html5-date-picker. Accessed 22 Feb. 2024. */ 
+
+input[type="date"] {
+    padding: 15px;
+    border: none; 
+    border-radius: 20px; 
+    background-color: #F3999D;
+    color: rgb(255, 255, 255);
+    grid-column: 5 / span 4; 
+    height: 50px; 
+    font-size: 40px; 
+    font-weight: 500;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer; 
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1); 
+}
+
+input[type="date"]:hover {
+    background-color: #FF7B89; 
+}
+/* 262588213843476. “Styling the Calendar Indicator for Webkit.” Gist, gist.github.com/evilmarty/3021338. Accessed 22 Feb. 2024. */ 
+
+button {
+    grid-column: 6 / span 2; 
+    background-color: transparent; 
+    color: rgb(0, 0, 0); 
+    margin-top: 20px;
+    border: 2px solid #F3999D; 
+    border-radius: 20px; 
+    padding: 15px; 
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer; 
+}
+
+button:hover {
+    background-color: #F3999D; 
+    color: white; 
+}
+/* w3schools. “CSS Buttons.” Www.w3schools.com, www.w3schools.com/css/css3_buttons.asp. */ 
+
+.result-container {
+    grid-column: 4 / span 6;
+    margin-top: 20px; 
+}
+
+.result-heading {
+    grid-column: 6 / span 6;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 500;
+    font-size: 25pt;
+    text-align: center; 
+    margin-top: -40px; 
+}
+
+.overview{
+    grid-column: 2 / span 10; 
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 500;
+    font-size: 17pt;
+}
+
+.strengths-div,
+.challenges-div,
+.strategies-div {
+    display: inline-block;
+    width: calc(33.33% - 20px); 
+    margin-right: 20px; 
+    vertical-align: top; 
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 500;
+    font-size: 15 pt;
+}
+
+
+
+/* above 1025px typically desktop*/
+
+@media only screen and (min-width: 1025px) {
+    .col1 {
+        grid-column: span 12;
+    }
+    .col2 {
+        grid-column: span 6;
+    }
+    .col3 {
+        grid-column: span 4;
+    }
+    .col4 {
+        grid-column: span 3;
+    }
+    .col6 {
+        grid-column: span 2;
+    }
+    .col12 {
+        grid-column: span 1;
+    }
+}
+
+ /* Price, Ryan. “Schedule.” IXD Methods, ryanwprice.github.io/ixd-methods/schedule/. /*
