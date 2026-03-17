@@ -105,16 +105,20 @@ button:hover {
     font-size: 17pt;
 }
 
+/* REPLACE WITH THIS */
+.result-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
 .strengths-div,
 .challenges-div,
 .strategies-div {
-    display: inline-block;
-    width: calc(33.33% - 20px); 
-    margin-right: 20px; 
-    vertical-align: top; 
+    flex: 1 1 250px; /* grow, shrink, min width before wrapping */
     font-family: 'Courier New', Courier, monospace;
     font-weight: 500;
-    font-size: 15 pt;
+    font-size: 15pt;
 }
 
 
@@ -142,4 +146,12 @@ button:hover {
     }
 }
 
- /* Price, Ryan. “Schedule.” IXD Methods, ryanwprice.github.io/ixd-methods/schedule/. /*
+
+
+ @media only screen and (max-width: 768px) {
+    .strengths-div,
+    .challenges-div,
+    .strategies-div {
+        flex: 1 1 100%;
+    }
+}
