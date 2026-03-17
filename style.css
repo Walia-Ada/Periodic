@@ -22,14 +22,21 @@ body {
 }
 
 img {
-    padding: 50px; 
+    max-width: 100%;
+    height: auto;
+}
+
+header {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
 }
 
 .logo {
     display: block;
-    margin: 50px; /* Center the logo horizontally */
-    grid-column: 4 / span 6; /* Spanning 10 columns starting from the 2nd column */
-    /* Other styles for logo */
+    width: min(90vw, 520px);
+    margin: 20px auto 10px;
+    padding: 0;
 }
 
 h1 {
