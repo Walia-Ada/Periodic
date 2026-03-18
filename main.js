@@ -198,25 +198,32 @@ function displayResult(result, phase) {
      
      
  
-     if (result.strengths) {
-         let strengthsDiv = createSection("Strengths", result.strengths);
-         // creates a nother section. // 
-         resultContainer.appendChild(strengthsDiv);
-         // adds to the result container // 
-         // TheCodex. “Java Programming #10 - Defining Methods and Functions.” YouTube, 27 Mar. 2019, www.youtube.com/watch?v=SkVDfaHQwRU. Accessed 21 Nov. 2023.// 
-     }
- 
- 
-     if (result.challenges) {
-         let challengesDiv = createSection("Challenges", result.challenges);
-         resultContainer.appendChild(challengesDiv);
-     }
- 
-   
-     if (result.strategies) {
-         let strategiesDiv = createSection("Strategies", result.strategies);
-         resultContainer.appendChild(strategiesDiv);
-     }
+    let sectionsRow = document.createElement("div");
+    sectionsRow.classList.add("sections-row");
+
+    if (result.strengths) {
+        let strengthsDiv = createSection("Strengths", result.strengths);
+        // creates a nother section. // 
+        sectionsRow.appendChild(strengthsDiv);
+        // adds to the result container // 
+        // TheCodex. “Java Programming #10 - Defining Methods and Functions.” YouTube, 27 Mar. 2019, www.youtube.com/watch?v=SkVDfaHQwRU. Accessed 21 Nov. 2023.// 
+    }
+
+
+    if (result.challenges) {
+        let challengesDiv = createSection("Challenges", result.challenges);
+        sectionsRow.appendChild(challengesDiv);
+    }
+
+  
+    if (result.strategies) {
+        let strategiesDiv = createSection("Strategies", result.strategies);
+        sectionsRow.appendChild(strategiesDiv);
+    }
+
+    if (sectionsRow.children.length > 0) {
+        resultContainer.appendChild(sectionsRow);
+    }
 }
  
  // Basically this is the order in which is supposed to appear in 

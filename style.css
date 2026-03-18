@@ -85,8 +85,9 @@ button:hover {
 /* w3schools. “CSS Buttons.” Www.w3schools.com, www.w3schools.com/css/css3_buttons.asp. */ 
 
 .result-container {
-    grid-column: 4 / span 6;
-    margin-top: 20px; 
+    grid-column: 2 / span 10;
+    width: min(1200px, 92vw);
+    margin: 20px auto 0;
 }
 
 .result-heading {
@@ -99,23 +100,22 @@ button:hover {
 }
 
 .overview{
-    grid-column: 2 / span 10; 
+    grid-column: 1 / -1;
     font-family: 'Courier New', Courier, monospace;
     font-weight: 500;
     font-size: 17pt;
 }
 
-/* REPLACE WITH THIS */
-.result-container {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+.sections-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    align-items: start;
 }
 
 .strengths-div,
 .challenges-div,
 .strategies-div {
-    flex: 1 1 250px; /* grow, shrink, min width before wrapping */
     font-family: 'Courier New', Courier, monospace;
     font-weight: 500;
     font-size: 15pt;
@@ -149,9 +149,13 @@ button:hover {
 
 
  @media only screen and (max-width: 768px) {
+    .sections-row {
+        grid-template-columns: 1fr;
+    }
+
     .strengths-div,
     .challenges-div,
     .strategies-div {
-        flex: 1 1 100%;
+        width: 100%;
     }
 }
